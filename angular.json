@@ -5,7 +5,11 @@
   "projects": {
     "08-maps-app": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "skipTests": true
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -94,5 +98,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "78747f82-e23a-4d79-ba91-6365599ccdc4"
   }
 }

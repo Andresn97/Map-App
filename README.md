@@ -1,27 +1,15 @@
-# 08MapsApp
+# Maps App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.4.
+**Welcome to this App**
 
-## Development server
+Developed with Angular, this is an app for to practice with this framework, using the **Google Maps API**.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Follow the next instructions for to run this project:
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Clone this repository.
+2. Configure your Google Cloud Project and Get the [**API key**](https://console.cloud.google.com/google/maps-apis/credentials) for access to use the API.
+3. Generate an **.env file**, you can see the **.env.template** in the project like example.
+4. Enter to project and run `
+  npm start
+` to generate a folder necessary to get your **API Key** and put in the components automatically.
+5. Visit the different pages and see the multiples functions developed using the Google Maps API.

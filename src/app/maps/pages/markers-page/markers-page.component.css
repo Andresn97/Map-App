@@ -1,0 +1,13 @@
+.list-group {
+  position: fixed;
+  top: 2rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+
+button {
+  position: fixed;
+  bottom: 3rem;
+  right: 1rem;
+}

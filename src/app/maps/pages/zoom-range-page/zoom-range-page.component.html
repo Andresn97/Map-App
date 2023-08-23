@@ -2,24 +2,34 @@
   height="100vh"
   width="100vw"
   [zoom]="zoom"
-  [options]="mapOptions"
-  (mapMousemove)="moveMap( $event )"
+  [options]="mapDefaultOptions"
+  (zoomChanged)="handleZoomChange()"
+  (centerChanged)="handleCenterChange()"
+  #map
 ></google-map>
 
 <div class="floating-range p-2">
   <div class="floating-content">
-    <button (click)="zoomOut()" class="btn btn-primary"> - </button>
+    <button 
+      (click)="zoomOut()" 
+      class="btn btn-primary"
+      [disabled]="zoom === 3"
+    > - </button>
 
     <input type="range"
       class="form-range px-2"
-      min="-2"
+      min="3"
       max="18"
       [value]="zoom"
-      (input)="zoomChanged( zoomInput.value )"
+      (input)="zoomInputChanged( zoomInput.value )"
       #zoomInput
     >
 
-    <button (click)="zoomIn()" class="btn btn-primary"> + </button>
+    <button 
+      (click)="zoomIn()" 
+      class="btn btn-primary"
+      [disabled]="zoom === 18"
+    > + </button>
   </div>
 
   <span class="form-label">

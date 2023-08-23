@@ -1,1 +1,31 @@
-<p>markers-page works!</p>
+
+<google-map 
+  height="100vh"
+  width="100vw"
+  [center]="center"
+  [options]="mapDefaultOptions"
+  #map
+>
+  <map-marker 
+    *ngFor="let mark of marks; let i = index"
+    [position]="mark.center"
+    [icon]="getMarkItemIcon( mark.color )"
+    [options]="markerOptions"
+    (mapDragend)="onDraggable( $event, i )"
+  ></map-marker>
+</google-map>
+
+<ul class="list-group">
+  <li *ngFor="let mark of marks; let i = index"
+    class="list-group-item"
+    [ngStyle]="{ backgroundColor: mark.color, color: 'white' }"
+    (click)="onClickMark( mark.center )"
+    (dblclick)="deleteMark(i)"
+  >
+    Marker {{ i + 1 }}
+  </li>
+</ul>
+
+<button (click)="createMarker()" class="btn btn-primary">
+  + Agregar marcador
+</button>

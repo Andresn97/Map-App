@@ -11,6 +11,7 @@ import { MiniMapComponent } from './components/mini-map/mini-map.component';
 import { PropertiesPageComponent } from './pages/properties-page/properties-page.component';
 import { SideMenuComponent } from './components/side-menu/side-menu.component';
 import { ZoomRangePageComponent } from './pages/zoom-range-page/zoom-range-page.component';
+import { MapsService } from './services/maps.service';
 
 
 
@@ -28,6 +29,6 @@ import { ZoomRangePageComponent } from './pages/zoom-range-page/zoom-range-page.
     CommonModule,
     MapsRoutingModule,
     GoogleMapsModule,
-  ]
+  ],
 })
 export class MapsModule { }

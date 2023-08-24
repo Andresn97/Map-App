@@ -1,5 +1,10 @@
 import { Component } from '@angular/core';
 
+import { CommonModule } from '@angular/common';
+
+import { MapsRoutingModule } from 'src/app/maps/maps-routing.module';
+
+
 
 interface MenuItem {
   name: string;
@@ -7,7 +12,9 @@ interface MenuItem {
 }
 
 @Component({
-  selector: 'maps-side-menu',
+  standalone: true,
+  selector: 'side-menu',
+  imports: [ CommonModule, MapsRoutingModule ],
   templateUrl: './side-menu.component.html',
   styleUrls: ['./side-menu.component.css']
 })
